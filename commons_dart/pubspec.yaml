@@ -1,6 +1,6 @@
 name: commons_dart
 description: commons_dart
-version: 1.0.0
+version: 0.0.1
 homepage: https://sokomishalov.github.io/about-me/
 author: sokomishalov <sokomishalov@mail.ru>
 
@@ -8,5 +8,5 @@ environment:
   sdk: '>=2.6.0 <3.0.0'
 
 dev_dependencies:
-  pedantic: ^1.8.0
+  pedantic: ^1.9.0
   test: ^1.6.0
