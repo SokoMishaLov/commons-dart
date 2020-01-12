@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  commons_dart:
-    path: ../commons_dart
+  commons_dart: ^0.0.1
+#    path: ../commons_dart
 
 dev_dependencies:
   pedantic: ^1.8.0
