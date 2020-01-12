@@ -51,7 +51,8 @@ class ErrorContainer extends StatelessWidget {
         ),
         Container(
           padding: EdgeInsets.only(top: 20),
-          child: retry == null
+          child: retry
+              == null
               ? Container()
               : retryContainer == null
                   ? RaisedButton(

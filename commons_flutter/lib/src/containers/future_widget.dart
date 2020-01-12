@@ -6,7 +6,7 @@ class FutureWidget<T> extends StatelessWidget {
   const FutureWidget({
     Key key,
     @required this.future,
-    @required this.render(T data),
+    @required this.render,
   }) : super(key: key);
 
   final Future future;
