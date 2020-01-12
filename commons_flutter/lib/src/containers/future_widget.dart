@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'platfrom_dependent_loader.dart';
 
-class FutureWidget extends StatelessWidget {
+class FutureWidget<T> extends StatelessWidget {
   const FutureWidget({
     Key key,
     @required this.future,
-    @required this.render(dynamic data),
+    @required this.render(T data),
   }) : super(key: key);
 
   final Future future;
-  final Function render;
+  final Widget Function(T) render;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,11 @@ class FutureWidget extends StatelessWidget {
         future: future,
         builder: (_, snapshot) {
           switch (snapshot.connectionState) {
-            case ConnectionState.none:
             case ConnectionState.waiting:
-              return Loader();
+            case ConnectionState.active:
+              return PlatformDependentLoader();
+            case ConnectionState.none:
+              return Text(snapshot?.error);
             default:
               return !snapshot.hasError
                   ? render(snapshot.data)

@@ -3,8 +3,9 @@ import 'dart:io' show Platform;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Loader extends StatelessWidget {
-  const Loader({Key key, this.width, this.height}) : super(key: key);
+class PlatformDependentLoader extends StatelessWidget {
+  const PlatformDependentLoader({Key key, this.width, this.height})
+      : super(key: key);
 
   final double width;
   final double height;
